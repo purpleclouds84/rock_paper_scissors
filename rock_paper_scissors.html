@@ -10,19 +10,49 @@
 		function computerPlay() {
 			let selection = Math.floor(Math.random()*3);
 			if (selection === 0) {
-				return 'Rock';
+				return 'rock';
 			} else if (selection === 1) {
-				return 'Paper';
+				return 'paper';
 			} else if (selection === 2) {
-				return 'Scissors';
+				return 'scissors';
 			}
 		}
 
-		function playRound(playerSelection, computerSelection) {
+		function playRound(playerSelection) {
+		  let playerChoice = 'rock';
+		  computerSelection = computerPlay;
+			if (playerChoice === computerSelection) {
+				return 'Tie';
+			}
 
-		}
-
-
+			switch (playerChoice) {
+				case 'rock': {
+					if (computerSelection === 'scissors') {
+						return 'You win!';
+					} else if (computerSelection === 'paper') {
+						return 'You lose! Try again?';
+					};
+					break;
+				}
+				case 'scissors': {
+					if (computerSelection === 'paper') {
+						return 'You win! Good job!';
+					} else if (computerSelection === 'rock') {
+						return 'You lose! Go for another?';
+					};
+					break;
+				} 
+				case 'paper': {
+					if (computerSelection === 'rock') {
+						return 'You win! Always bet on paper!'
+					} else if (computerSelection === 'scissors') {
+						return 'You lose! Metal is stronger than paper!'
+					}
+				}
+			}
+    }
+    	let playerChoice = 'rock';
+			console.log(playRound(playerChoice));
 	</script>
 
 
