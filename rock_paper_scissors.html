@@ -62,9 +62,10 @@
 						console.log('You lose this round, ' + computerSelection + ' beats ' + playerSelection + '!');
 						computerWins++;
 					} else {
-						console.log('You and the computer tied at ' + playerWins + ' points!');
+						console.log('You and the computer tied at ' + playerSelection + '!');
 					}
 				}
+				
 				if (playerWins > computerWins) {
 					console.log('Congratulations! You won over the computer with the score ' + playerWins + ' to ' + computerWins + '!');
 				} else if (playerWins < computerWins) {
