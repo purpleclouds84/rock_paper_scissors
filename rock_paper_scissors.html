@@ -7,13 +7,13 @@
 <body>
 		
 	<script>
-		function computerPlay() {
+		let computerPlay = () => {
 			const options = ['rock', 'paper', 'scissors'];
 			const randomOption = Math.floor(Math.random()*3);
 			return options[randomOption];
 		}
 
-		function playRound(playerSelection,computerSelection) {
+		let playRound = (playerSelection,computerSelection) => {
 
 			if (playerSelection === computerSelection) {
 				return 'draw';
@@ -47,7 +47,7 @@
 			} 
    		 }
 
-			let game = (rounds) => {
+			let playGame = (rounds) => {
 				let playerWins = 0;
 				let computerWins = 0;
 				for (let i = 0; i < rounds; i++) {
