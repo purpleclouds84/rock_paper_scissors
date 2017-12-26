@@ -45,7 +45,7 @@
 					break;
 				}
 			} 
-    }
+   		 }
 
 			let game = (rounds) => {
 				let playerWins = 0;
@@ -65,7 +65,7 @@
 						console.log('You and the computer tied at ' + playerSelection + '!');
 					}
 				}
-				
+
 				if (playerWins > computerWins) {
 					console.log('Congratulations! You won over the computer with the score ' + playerWins + ' to ' + computerWins + '!');
 				} else if (playerWins < computerWins) {
@@ -76,13 +76,13 @@
 			}
 
 			let userInput = () => {
-				let answer = prompt('Rock, Paper, Scissors?');
-				answer = answer.toLowerCase();
-				while (!(answer == 'rock' || answer == 'paper' || answer == 'scissors')) {
-					answer = prompt('Please type either Rock, Paper or Scissors!');
-					answer = answer.toLowerCase();
+				let input = prompt('Rock, Paper, Scissors?');
+				input = input.toLowerCase();
+				while (!(input == 'rock' || input == 'paper' || input == 'scissors')) {
+					input = prompt('Please type either Rock, Paper or Scissors!');
+					input = input.toLowerCase();
 				}
-				return answer;
+				return input;
 			}
 	</script>
 
